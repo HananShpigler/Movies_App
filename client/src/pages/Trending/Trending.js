@@ -18,7 +18,9 @@ const Trending = () => {
   };
 
   useEffect(() => {
+    window.scroll(0, 0);
     getTrending();
+    // eslint-disable-next-line
   }, [currentPage]);
 
   return (

@@ -26,7 +26,7 @@ const Carousel = ({ id, media_type }) => {
 
   const responsive = {
     0: {
-      items: 4,
+      items: 3,
     },
     512: {
       items: 5,
@@ -56,7 +56,7 @@ const Carousel = ({ id, media_type }) => {
       disableButtonsControls
       responsive={responsive}
       items={items}
-      // autoPlay
+      autoPlay
     />
   );
 };

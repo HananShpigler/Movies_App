@@ -4,6 +4,7 @@ import "./SingleContent.css";
 
 import { img_300, unavailablePoster } from "../../config/config";
 import formatDate from "../../utils/formatDate";
+import ContentModal from "../ContentModal/ContentModal";
 
 const SingleContent = ({
   id,
@@ -14,7 +15,7 @@ const SingleContent = ({
   vote_average,
 }) => {
   return (
-    <div className="media">
+    <ContentModal media_type={media_type} id={id}>
       <Badge
         badgeContent={vote_average}
         color={vote_average > 6 ? "primary" : "secondary"}
@@ -29,7 +30,7 @@ const SingleContent = ({
         {media_type === "tv" ? "TV Series" : "Movie"}
         <span className="subTitle">{formatDate(date)}</span>
       </span>
-    </div>
+    </ContentModal>
   );
 };
 
